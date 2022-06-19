@@ -80,7 +80,7 @@ if (searchBtn) {
 async function getMovie(val) {
   try {
     const response = await fetch(
-      `http://www.omdbapi.com/?s=${val}&plot='short'&apikey=${API_KEY}`
+      `https://www.omdbapi.com/?s=${val}&plot='short'&apikey=${API_KEY}`
     );
     const data = await response.json();
 
@@ -88,7 +88,7 @@ async function getMovie(val) {
 
     movie_result.map(async (movie, index) => {
       const res = await fetch(
-        `http://www.omdbapi.com/?i=${movie.imdbID}&plot='short'&apikey=${API_KEY}`
+        `https://www.omdbapi.com/?i=${movie.imdbID}&plot='short'&apikey=${API_KEY}`
       );
       const movieResponse = await res.json();
 
@@ -117,7 +117,7 @@ if (movieVal) {
 
 async function saveToList(id) {
   const data = await fetch(
-    `http://www.omdbapi.com/?i=${id}&plot='short'&apikey=${API_KEY}`
+    `https://www.omdbapi.com/?i=${id}&plot='short'&apikey=${API_KEY}`
   );
   const response = await data.json();
 
@@ -125,7 +125,7 @@ async function saveToList(id) {
 
   localStorage.setItem('myWatchlist', JSON.stringify(clickedArray));
 }
-
+// display innerhtml
 function displayInnerHtml(clickedArray) {
   clickedArray.map((movie) => {
     if (watchArray) {
