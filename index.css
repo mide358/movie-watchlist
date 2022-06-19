@@ -1,0 +1,228 @@
+/* layout */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Andika', sans-serif;
+  height: 100%;
+  line-height: 1.5;
+}
+
+h1,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background: url('images/myke-simon-atsUqIm3wxo-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  height: 15rem;
+  width: 100%;
+}
+.header-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #ffffff;
+  background: rgba(50, 70, 80, 0.7);
+  height: 100%;
+  line-height: 20px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+.movie-result img {
+  height: 10em;
+  width: 6.2em;
+  margin-right: 2rem;
+  align-self: center;
+}
+
+.movie-result {
+  display: flex;
+  /* flex-direction: column-reverse; */
+  margin: 2rem auto;
+  justify-content: center;
+  width: 70%;
+}
+.movie-details {
+  width: 100%;
+}
+.title {
+  width: 100%;
+  display: flex;
+}
+#rating {
+  margin-left: 0.4rem;
+}
+#rating p {
+  display: inline-block;
+  min-width: 4rem;
+}
+.action-btn {
+  display: flex;
+}
+.search {
+  /* position: absolute; */
+  width: 80%;
+  /* top: 14rem; */
+  margin: -1rem auto 1rem auto;
+  display: flex;
+  flex-direction: row;
+  /* margin: auto; */
+  border: 1px solid #d1d5db;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+}
+#search-bar {
+  flex: 1;
+  padding: 1rem 5rem;
+  justify-content: center;
+  padding: 9px 11px 9px 17px;
+  gap: 8px;
+  border: none;
+}
+#search-btn {
+  background: #f9fafb;
+  width: 5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0px 6px 6px 0p;
+  cursor: pointer;
+}
+.movie-summary {
+  margin-top: 1rem;
+}
+
+/* typography */
+
+.header-details h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+.header-details a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.action-btn p {
+  margin-right: 1rem;
+  font-size: 0.8rem;
+}
+#summary {
+  line-height: 20px;
+  color: #6b7280;
+  letter-spacing: 1px;
+}
+#hr {
+  width: 80%;
+  border-bottom: 2px solid #e5e7eb;
+  margin: auto;
+}
+
+#movie-icon {
+  margin: auto;
+  size: 20rem;
+  color: #dfdddd;
+  text-align: center;
+  margin-top: 8rem;
+}
+#star {
+  color: #fec654;
+}
+
+#sign {
+  border-radius: 50%;
+  background: #111827;
+  color: white;
+  padding: 2px;
+  font-weight: bold;
+}
+.add,
+.remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.add:focus {
+  background-color: rgb(13, 81, 71);
+  color: #d1d5db;
+  border-radius: 4px;
+}
+
+.remove:focus {
+  background-color: rgb(81, 13, 15);
+  color: #d1d5db;
+  border-radius: 4px;
+}
+.initialScreen {
+  text-align: center;
+  margin-top: 8rem;
+}
+.initialScreen h3 {
+  color: #dfdddd;
+}
+.hide {
+  display: none;
+}
+
+.initialScreen p {
+  color: #363636;
+}
+#search-error {
+  text-align: center;
+  color: #dfdddd;
+  width: 40%;
+  margin: 5em auto;
+}
+/* media queries */
+@media (max-width: 768px) {
+  .movie-result img {
+    height: 10em;
+    width: 5.5em;
+    margin-right: 2rem;
+    align-self: center;
+  }
+
+  #movie-title {
+    font-size: 1.1rem;
+  }
+  #rating {
+    margin-left: 0.4rem;
+
+    font-size: 0.8rem;
+  }
+
+  #time,
+  #genre {
+    font-size: 12px;
+  }
+
+  /* typography */
+
+  .header-details h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+  }
+  .header-details a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  #summary {
+    font-size: 0.9rem;
+  }
+
+  .remove,
+  .add {
+    font-size: 0.6rem;
+  }
+} ;
